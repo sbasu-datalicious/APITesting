@@ -4,6 +4,7 @@ from Tools import DBConnect
 req = Request.Request()
 qry = DBConnect.DBConnect()
 
+# Validae API with empty PayLoad
 def test_negative_TestCase1_emptyPayLoad():
     """
 
@@ -20,6 +21,7 @@ def test_negative_TestCase1_emptyPayLoad():
 
     print "Test Case-1: Empty payload, PASS"
 
+# Validate API with missing key title
 def test_negative_TestCase2_missingTitleKey():
     """
 
@@ -41,6 +43,8 @@ def test_negative_TestCase2_missingTitleKey():
 
     print "Test Case-2: empty product title, PASS"
 
+
+# Code to validate API for empty string in payload
 def test_negative_TestCase3_emptyStringForTitleInPayLoad():
     """
 
@@ -65,6 +69,8 @@ def test_negative_TestCase3_emptyStringForTitleInPayLoad():
 
     print "Test Case-2: empty string for title, PASS"
 
+
+# Assertion code
 def verify_negative_test_response(response_list, test_case, exp_err_msg, exp_err_code):
     """
 
