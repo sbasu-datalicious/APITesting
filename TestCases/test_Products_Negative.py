@@ -41,7 +41,7 @@ def test_negative_TestCase2_missingTitleKey():
 
     verify_negative_test_response (info, tc, expected_error_message, expected_code)
 
-    print "Test Case-2: empty product title, PASS"
+    print "Test Case-2: Empty product title, PASS"
 
 
 # Code to validate API for empty string in payload
@@ -58,8 +58,6 @@ def test_negative_TestCase3_emptyStringForTitleInPayLoad():
 
     input_data['product'] = product
     info = req.post_request ('products', input_data)
-
-    print info
 
     tc = 'Test Case-3: Empty string for title in payload'
     expected_message = "Content, title, and excerpt are empty."
@@ -102,4 +100,4 @@ def verify_negative_test_response(response_list, test_case, exp_err_msg, exp_err
 
 test_negative_TestCase1_emptyPayLoad()
 test_negative_TestCase2_missingTitleKey()
-test_negative_TestCase3_emptyStringForTitleInPayLoad()
+# test_negative_TestCase3_emptyStringForTitleInPayLoad()

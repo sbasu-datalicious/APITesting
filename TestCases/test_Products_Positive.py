@@ -1,6 +1,5 @@
 from Tools import Request
 from Tools import DBConnect
-import json
 
 req = Request.Request()
 qry = DBConnect.DBConnect()
@@ -42,9 +41,8 @@ def test_create_product():
     assert response_price == price, "Actual and expected prices are different. " \
                                     "The expected response price is : {}".format(response_price)
 
-    # print 'id is : {}'.format(product_id)
 
-    print "Create_product test PASSED"
+    print "Test Case 1:- Create_product test PASS"
 
 
 def test_verify_product_db():
@@ -71,7 +69,7 @@ def test_verify_product_db():
     assert db_regular_price == price, "Expected price and Actual price do not match. " \
                                       "Actual price is: {}".format(db_regular_price)
 
-    print "API response and DB response match. PASSED"
+    print "Test Case 2:- API response and DB response match. PASS"
 
 
 test_create_product()
